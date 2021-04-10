@@ -9,7 +9,7 @@
 	},
 	"editor.codeActionsOnSave": { "source.fixAll.eslint": true },
 	"editor.minimap.enabled": false,
-	"prettier.jsxSingleQuote": true,
+
 	"prettier.semi": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"editor.formatOnPaste": true,
