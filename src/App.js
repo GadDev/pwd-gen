@@ -1,22 +1,25 @@
 import "./App.css";
 
+import { useState } from "react";
+
+import { genPwd } from "./utils/genPwd";
 function App() {
+  const [value, setValue] = useState("");
+
+  const handleClick = () => {
+    let pwd = genPwd(17);
+    setValue(pwd);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        hello
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>MP-Password generator</h1>
+      <div>
+        <label htmlFor="password">
+          <input type="text" value={value} placeholder="Create Password" />
+        </label>
+      </div>
+      <button onClick={() => handleClick()}>Generate Password</button>
     </div>
   );
 }
