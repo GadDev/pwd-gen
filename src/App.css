@@ -1,9 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   overflow: hidden;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 header {
+  display: flex;
+  align-items: center;
   height: 60px;
   border-bottom: 1px solid #333;
+  padding: 1rem;
 }
 
 main {
@@ -12,4 +23,46 @@ main {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 60px);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+input {
+  border-radius: 5px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  min-width: 280px;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  display: block;
+  min-width: 280px;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+
+  background-color: #ccc;
+  transition: 0.3s all ease-in-out;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  color: #ccc;
+  background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }

@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>MP-Password generator</h1>
+        <h1>M-Password generator</h1>
       </header>
       <main>
         <section>
@@ -27,12 +27,19 @@ function App() {
                 type="number"
                 value={pwdStrength}
                 onChange={(e) => setPwdStrength(e.target.value)}
+                min="7"
+                max="24"
               />
             </label>
           </div>
           <div>
             <label htmlFor="password">
-              <input type="text" value={value} placeholder="Create Password" />
+              <input
+                type="text"
+                value={value}
+                placeholder="Create Password"
+                readOnly
+              />
             </label>
           </div>
           <button onClick={() => handleClick()}>Generate Password</button>
