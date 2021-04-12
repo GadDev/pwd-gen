@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>M-Password generator</h1>
+        <h1>MP-Password generator</h1>
       </header>
       <main>
         <section>
